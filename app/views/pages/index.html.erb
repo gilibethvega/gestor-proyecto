@@ -1,0 +1,34 @@
+<div class="dashboard-content">
+  <div class="content-title">
+    <h1 class="my-3 p-1">Crea un nuevo proyecto</h1>
+  </div>
+  <div class="container">
+    <form id="create_projects" method="get" action="<%= pages_create_path %>">
+      <div class= "form-group">
+        <label for="name">Nombre</label>
+        <input name="name" class="form-control">
+      </div>
+      <div class= "form-group">
+        <label for="description">Descripción</label>
+        <textarea name="description" class="form-control"> </textarea>
+      </div>
+      <div class= "form-group">
+        <label for="firstdate">Fecha de inicio</label>
+        <input name="firstdate" type="date" class="form-control" placeholder="Enter start date">
+      </div>
+      <div class= "form-group">
+        <label for="lastdate">Fecha de finalización</label>
+        <input name="lastdate" type="date" class="form-control" placeholder="Enter end date">
+      </div>
+      <div class= "form-group">
+        <label for="Status">Status</label>
+        <select name="status" class="form-control">
+          <option value="propuesta">Propuesta</option>
+          <option value="progreso">En progreso</option>
+          <option value="finalizado">Terminado</option>
+        </select>
+      </div>
+        <input type="submit" value="Enviar" class="form-control btn btn-success">
+    </form>
+  </div>
+</div>

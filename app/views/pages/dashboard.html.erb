@@ -1,0 +1,38 @@
+<div class="dashboard-content">
+  <div class="content-title">
+    <h1 class="my-3 p-1">Gestor de proyectos</h1>
+  </div>
+  <div class="container">
+
+<div class="barra-principal">
+  <form class="form-inline mx-4">
+    <select name="status" class="btn btn-outline-success"><br>
+      <option value="">Todos</option>
+      <option value="propuesta">Propuesta</option>
+      <option value="progreso">En progreso</option>
+      <option value="finalizado">Terminado</option>
+    </select><br>
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Filtrar</button>
+    <div class= "aling-left">
+        <button type="button" class="btn btn-success btn-lg my-5 mx-5"><%= link_to "Ingresar un nuevo Proyecto", pages_index_path %></button>
+  </div>
+  </form>
+</nav>
+<table class="table">
+    <tr>
+      <th>Nombre</th>
+      <th>Descripción</th>
+      <th>Fecha de inicio</th>
+      <th>Fecha de fin</th>
+      <th>Estado</th>
+    </tr>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%=project.name %> </td>
+        <td><%=project.description %> </td>
+        <td><%=project.firstdate %> </td>
+        <td><%=project.lastdate %> </td>
+        <td><%=project.status %> </td>
+      </tr>
+    <% end %>
+</table>
